@@ -9,6 +9,7 @@
 #define TIMER_H_
 
 #include <stdbool.h>
+#include <msp430.h>
 
 unsigned int timeElapsed_Current_ms = 0;
 
@@ -36,7 +37,5 @@ __interrupt void timeElapsed_Clock(void)
 bool isTimeUp(unsigned int targetTime_ms){
     return (targetTime_ms <= timeElapsed_Current_ms);
 }
-
-
 
 #endif /* TIMER_H_ */

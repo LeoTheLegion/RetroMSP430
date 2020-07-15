@@ -9,13 +9,13 @@
 #define FREQUENCY_H_
 
 #include <Output.h>
+#include <msp430.h>
 
 int frequencyPin;
 int currentFrequency = 500;
 
 void setupFrequency(int pin){
     frequencyPin = pin;
-
 
     setupOutput(frequencyPin);
     setOutput(frequencyPin,OFF);
@@ -35,9 +35,10 @@ void setFrequency(int freq){
 #pragma vector = TIMER0_A0_VECTOR
 __interrupt void Frequency_Clock(void)
 {
-    TACCR0 += currentFrequency;
-    P1OUT ^= frequencyPin;
-
+    if(currentFrequency > 0){
+        TACCR0 += currentFrequency;
+        P1OUT ^= frequencyPin;
+    }
 }
 
 
