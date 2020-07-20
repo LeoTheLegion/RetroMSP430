@@ -35,7 +35,7 @@ __interrupt void timeElapsed_Clock(void)
 }
 
 bool isTimeUp(unsigned int targetTime_ms){
-    return (targetTime_ms <= timeElapsed_Current_ms);
+    return (targetTime_ms == timeElapsed_Current_ms); //I dont feel safe with this...
 }
 
 #endif /* TIMER_H_ */

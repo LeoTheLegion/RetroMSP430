@@ -33,16 +33,28 @@ typedef enum Notes{
     B7 = 3951
 }Notes;
 
+#define TICKS_PER_BEAT 4
+
+static unsigned int ms_per_tick = 0;
 unsigned int timeElapsed_Target_ms = 0;
 
 void setSpeakerPin(int pin){
     setUpTimer();
     setupFrequency(pin);
 }
+
+void setBPM(unsigned int bpm) {
+    ms_per_tick = 60000 / (TICKS_PER_BEAT * bpm);
+}
+
 void PlayNote(Notes note, int duration){
     setFrequency(note);
     timeElapsed_Target_ms += duration;
     while (!isTimeUp (timeElapsed_Target_ms)){}
+}
+
+void Play(Notes note, int num_of_ticks){
+    PlayNote(note, num_of_ticks * ms_per_tick);
 }
 
 void Pause(int duration){
@@ -51,5 +63,8 @@ void Pause(int duration){
     while (!isTimeUp (timeElapsed_Target_ms)){}
 }
 
+void Rest(int num_of_ticks){
+    Pause(num_of_ticks * ms_per_tick);
+}
 
 #endif /* NOTEPLAYER_H_ */
