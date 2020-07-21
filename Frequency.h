@@ -29,7 +29,7 @@ void setupFrequency(int pin){
 }
 
 void setFrequency(int freq){
-    currentFrequency = freq;
+    currentFrequency = (1000000)/ (2*freq);
 }
 
 #pragma vector = TIMER0_A0_VECTOR

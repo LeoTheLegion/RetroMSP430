@@ -5,6 +5,7 @@
 #define LED1 BIT1
 #define LED2 BIT2
 
+
 void init()
 {
     WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
@@ -18,23 +19,24 @@ void init()
     _enable_interrupt();
 }
 
-void TestC5Major()
+void TestC3Major()
 {
-    PlayNote(C6, 500);
-    PlayNote(D6, 500);
-    PlayNote(E6, 500);
-    PlayNote(F6, 500);
-    PlayNote(G6, 500);
-    PlayNote(A6, 500);
-    PlayNote(B6, 500);
-    PlayNote(B6, 500);
-    PlayNote(A6, 500);
-    PlayNote(G6, 500);
-    PlayNote(F6, 500);
-    PlayNote(E6, 500);
-    PlayNote(D6, 500);
-    PlayNote(C6, 500);
+    PlayNote(C3, 500);
+    PlayNote(D3, 500);
+    PlayNote(E3, 500);
+    PlayNote(F3, 500);
+    PlayNote(G3, 500);
+    PlayNote(A3, 500);
+    PlayNote(B3, 500);
+    PlayNote(B3, 500);
+    PlayNote(A3, 500);
+    PlayNote(G3, 500);
+    PlayNote(F3, 500);
+    PlayNote(E3, 500);
+    PlayNote(D3, 500);
+    PlayNote(C3, 500);
 }
+
 
 int main(void)
 {
@@ -42,91 +44,50 @@ int main(void)
 
     while (1)
     {
-        //TestC5Major();
+        //TestC3Major();
         setBPM(120);
 
-        Play(E6, 1);
-        Play(E6, 1);
+        Play(E4,1);
+        Play(E4,1);
         Rest(1);
-        Play(E6, 1);
+        Play(E4,1);
         Rest(1);
-        Play(C6, 1);
-        Play(E6, 1);
+        Play(C4,1);
+        Play(E4,1);
         Rest(1);
-
-        Play(F7, 1);
+        Play(G4,1);
         Rest(3);
-        Play(G6, 1);
+        Play(G3,1);
         Rest(3);
-/////////////////////////////////
 
-        Play(C6, 1);
+        Play(C4,1);
         Rest(2);
-        Play(G7, 1);
+        Play(G3,1);
         Rest(2);
-        Play(E7, 1);
-        Rest(1);
-
-        Rest(1);
-        Play(A7, 1);
-        Rest(1);
-        Play(B7, 1);
-        Rest(1);
-        Play(As6, 1);
-        Play(A6, 1);
-        Rest(1);
-
-        Play(G7, 1);
-        Play(E6, 1);
-        Rest(1);
-        Play(G6, 1);
-        Play(A6, 1);
-        Rest(1);
-        Play(F6, 1);
-        Play(G6, 1);
-
-        Rest(1);
-        Play(E6, 1);
-        Rest(1);
-        Play(C6, 1);
-        Play(D6, 1);
-        Play(B7, 1);
-        Rest(1);
-
-        //////////////////////////////////////////
-        Play(C6, 1);
+        Play(E3,1);
         Rest(2);
-        Play(G7, 1);
+        Play(A3,1);
+        Rest(1);
+        Play(B3,1);
+        Rest(1);
+        Play(As3,1);
+        Play(A3,1);
+        Rest(1);
+
+        Play(C3,1);
+        Play(E4,1);
+        Rest(1);
+        Play(G4,1);
+        Play(A4,1);
+        Rest(1);
+        Play(F4,1);
+        Play(G4,1);
+        Rest(1);
+        Play(E4,1);
+        Rest(1);
+        Play(C4,1);
+        Play(D4,1);
+        Play(B3,1);
         Rest(2);
-        Play(E7, 1);
-        Rest(1);
-
-        Rest(1);
-        Play(A7, 1);
-        Rest(1);
-        Play(B7, 1);
-        Rest(1);
-        Play(As6, 1);
-        Play(A6, 1);
-        Rest(1);
-
-        Play(G7, 1);
-        Play(E6, 1);
-        Rest(1);
-        Play(G6, 1);
-        Play(A6, 1);
-        Rest(1);
-        Play(F6, 1);
-        Play(G6, 1);
-
-        Rest(1);
-        Play(E6, 1);
-        Rest(1);
-        Play(C6, 1);
-        Play(D6, 1);
-        Play(B7, 1);
-        Rest(1);
-
-//////////////////////////////////////
     }
 }
