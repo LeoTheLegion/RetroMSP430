@@ -29,6 +29,10 @@ void setupFrequency(int pin){
 }
 
 void setFrequency(int freq){
+    if(freq < 1){
+        currentFrequency = -1;
+        return;
+    }
     currentFrequency = (1000000)/ (2*freq);
 }
 
