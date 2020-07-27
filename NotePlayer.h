@@ -19,6 +19,7 @@ typedef enum Notes{
     C3 = 130,
     D3 = 146,
     Ds3 = 155,
+    Eb3 = 155,
     E3 = 164,
     F3 = 174,
     Fs3 = 184,
@@ -31,18 +32,25 @@ typedef enum Notes{
 
     ////////////////////
     C4 = 261,
+    Cs4 = 277,
+    Db4 = 277,
     D4 = 293,
     Ds4 = 311,
     Eb4 = 311,
     E4 = 329,
     F4 = 349,
     Fs4 = 369,
+    Gb4 = 369,
     G4 = 391,
     Gs4 =   415,
+    Ab4 = 415,
     A4 =  440,
     As4 = 466,
+    Bb4 = 466,
+    B4 = 493,
     /////////////////////
-    C5 = 523
+    C5 = 523,
+    E5 = 659
 }Notes;
 
 #define TICKS_PER_BEAT 4
@@ -65,8 +73,8 @@ void PlayNote(Notes note, int duration){
     while (!isTimeUp (timeElapsed_Target_ms)){}
 }
 
-void Play(Notes note, int num_of_ticks){
-    PlayNote(note, num_of_ticks * ms_per_tick);
+void Play(Notes note){
+    PlayNote(note,  ms_per_tick);
 }
 
 void Pause(int duration){
