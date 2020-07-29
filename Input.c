@@ -11,11 +11,8 @@ void setupInput(int bit){
     P1DIR &= ~(bit);  //Declare Inputs
 }
 
-bool getInput(int bit){// works like a OnPressed for now...
-    unsigned int i;   //Delay variable
+bool getInput(int bit){
     if((P1IN & bit) == bit){
-        while((P1IN & bit) == bit){}//wait for release
-        for(i=0;i<20000;i++){}
         return true;
     }
     return false;

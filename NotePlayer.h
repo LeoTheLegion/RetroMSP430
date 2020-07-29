@@ -69,7 +69,7 @@ void setBPM(unsigned int bpm) {
 
 void PlayNote(Notes note, int duration){
     setFrequency(note);
-    timeElapsed_Target_ms += duration;
+    timeElapsed_Target_ms = timeElapsed_Current_ms + duration;
     while (!isTimeUp (timeElapsed_Target_ms)){}
 }
 

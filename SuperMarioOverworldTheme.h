@@ -12,6 +12,11 @@
 
 #include <NotePlayer.h>
 
+void SM_setBPM()
+{
+    setBPM(120);
+}
+
 void SM_measure_1()
 {
     Play(E4);
