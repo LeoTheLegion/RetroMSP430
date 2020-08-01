@@ -12,7 +12,7 @@
 #include <msp430.h>
 
 int frequencyPin;
-int currentFrequency = 500;
+int currentFrequency = -1;
 
 void setupFrequency(int pin){
     frequencyPin = pin;

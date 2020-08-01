@@ -31,7 +31,6 @@ __interrupt void timeElapsed_Clock(void)
                 timeElapsed_Current_ms++;
                 break;
         }
-
 }
 
 bool isTimeUp(unsigned int targetTime_ms){

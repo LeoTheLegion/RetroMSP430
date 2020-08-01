@@ -74,7 +74,6 @@ int main(void)
             SM_Full(currentSong);
         }
 
-
         int i;
 
         for (i = 0; i < (songSize)  ; i++){
@@ -82,11 +81,9 @@ int main(void)
             if(!getInput(SWITCH)){
                 //switch song
                 selected_song = !selected_song;
-
-                setOutput(LED2, ON);// i need the power for the switch
+                Pause(1);//To set the freq to -1
                 break;
             }
         }
-
     }
 }

@@ -11,6 +11,8 @@
 #include <Timer.h>
 #include <Frequency.h>
 
+#define TICKS_PER_BEAT 4
+
 typedef enum Notes{
     Testnote1 = 500,
     Testnote2 = 1000,
@@ -53,8 +55,6 @@ typedef enum Notes{
     E5 = 659
 }Notes;
 
-#define TICKS_PER_BEAT 4
-
 static unsigned int ms_per_tick = 0;
 unsigned int timeElapsed_Target_ms = 0;
 
@@ -63,7 +63,7 @@ void setSpeakerPin(int pin){
     setupFrequency(pin);
 }
 
-void setBPM(unsigned int bpm) {
+void setBPM(int bpm) {
     ms_per_tick = 60000 / (TICKS_PER_BEAT * bpm);
 }
 
@@ -79,7 +79,7 @@ void Play(Notes note){
 
 void Pause(int duration){
     setFrequency(-1);
-    timeElapsed_Target_ms += duration;
+    timeElapsed_Target_ms = timeElapsed_Current_ms + duration;
     while (!isTimeUp (timeElapsed_Target_ms)){}
 }
 
