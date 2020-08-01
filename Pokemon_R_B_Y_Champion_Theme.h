@@ -11,6 +11,9 @@
 #define POKEMON_R_B_Y_CHAMPION_THEME_H_
 
 #include <NotePlayer.h>
+#include <Song.h>
+
+#define PM_FULL_SIZE 97
 
 void PM_setBPM()
 {
@@ -656,6 +659,112 @@ void PM_measure53()
     Play(B4); //half note
     Play(B4); //half note
     Play(B4); //half note
+}
+
+void PM_Full(SONG *s){
+    SONG song[] = {
+        PM_setBPM,
+        PM_measure1,
+        PM_measure2,
+        PM_measure3,
+        PM_measure4,
+        PM_measure5,
+        PM_measure6,
+        PM_measure7,
+        PM_measure8,
+        PM_measure9,
+        PM_measure10,
+        PM_measure11,
+        PM_measure12,
+        PM_measure13,
+        PM_measure14,
+        PM_measure15, // trouble here
+        PM_measure16, // trouble here
+        PM_measure17, // trouble here
+        PM_measure18, // trouble here
+        PM_measure19,
+        PM_measure20,
+        PM_measure21,
+        PM_measure22,
+        PM_measure23,
+        PM_measure24,
+        PM_measure25,
+        PM_measure26,
+        PM_measure27,
+        PM_measure28,
+        PM_measure29,
+        PM_measure30,
+        PM_measure31,
+        PM_measure32,
+        PM_measure33,
+        PM_measure34,
+        PM_measure35,
+        PM_measure36,
+        PM_measure37,
+        PM_measure38,
+        PM_measure39,
+        PM_measure40,
+        PM_measure41,
+        PM_measure42,
+        PM_measure43,
+        PM_measure44,
+        PM_measure45,
+        PM_measure46,
+        PM_measure47,
+        PM_measure48,
+        PM_measure49,
+        PM_measure50,
+        PM_measure51,
+        PM_measure52,
+        PM_measure53,
+        PM_measure11,
+        PM_measure12,
+        PM_measure13,
+        PM_measure14,
+        PM_measure15, // trouble here
+        PM_measure16, // trouble here
+        PM_measure17, // trouble here
+        PM_measure18, // trouble here
+        PM_measure19,
+        PM_measure20,
+        PM_measure21,
+        PM_measure22,
+        PM_measure23,
+        PM_measure24,
+        PM_measure25,
+        PM_measure26,
+        PM_measure27,
+        PM_measure28,
+        PM_measure29,
+        PM_measure30,
+        PM_measure31,
+        PM_measure32,
+        PM_measure33,
+        PM_measure34,
+        PM_measure35,
+        PM_measure36,
+        PM_measure37,
+        PM_measure38,
+        PM_measure39,
+        PM_measure40,
+        PM_measure41,
+        PM_measure42,
+        PM_measure43,
+        PM_measure44,
+        PM_measure45,
+        PM_measure46,
+        PM_measure47,
+        PM_measure48,
+        PM_measure49,
+        PM_measure50,
+        PM_measure51,
+        PM_measure52,
+        PM_measure53
+    };
+    int i;
+    for (i = 0; i < (PM_FULL_SIZE)  ; i++){
+        s[i] = song[i];
+    }
 }
 
 #endif /* POKEMON_R_B_Y_CHAMPION_THEME_H_ */

@@ -11,6 +11,9 @@
 #define SUPERMARIOOVERWORLDTHEME_H_
 
 #include <NotePlayer.h>
+#include <Song.h>
+
+#define SM_FULL_SIZE 55
 
 void SM_setBPM()
 {
@@ -242,6 +245,78 @@ void SM_measure_29()
 void SM_measure_30()
 {
     Rest(7);
+}
+
+void SM_Full(SONG *s){
+    SONG song[] = {
+        SM_setBPM,
+        SM_measure_1,
+        SM_measure_2,
+        SM_measure_3,
+        SM_measure_4,
+        SM_measure_5,
+        SM_measure_6,
+        SM_measure_7,
+        SM_measure_8,
+        SM_measure_9,
+        SM_measure_10,
+        SM_measure_11,
+        SM_measure_12,
+        SM_measure_13,
+        SM_measure_14,
+        SM_measure_15,
+        SM_measure_16,
+        SM_measure_17,
+        SM_measure_18,
+        SM_measure_19,
+        SM_measure_20,
+        SM_measure_21,
+        SM_measure_22,
+        SM_measure_23,
+        SM_measure_24,
+        SM_measure_25,
+        SM_measure_26,
+        SM_measure_27,
+        SM_measure_28,
+        SM_measure_29,
+        SM_measure_30,
+        SM_measure_27,
+        SM_measure_28,
+        SM_measure_3,
+        SM_measure_4,
+        SM_measure_5,
+        SM_measure_6,
+        SM_measure_7,
+        SM_measure_8,
+        SM_measure_9,
+        SM_measure_10,
+        SM_measure_11,
+        SM_measure_12,
+        SM_measure_13,
+        SM_measure_14,
+        SM_measure_15,
+        SM_measure_16,
+        SM_measure_17,
+        SM_measure_18,
+        SM_measure_19,
+        SM_measure_20,
+        SM_measure_21,
+        SM_measure_22,
+        SM_measure_23,
+        SM_measure_24,
+        SM_measure_25,
+        SM_measure_26,
+        SM_measure_27,
+        SM_measure_28,
+        SM_measure_29,
+        SM_measure_30,
+        SM_measure_27,
+        SM_measure_28
+    };
+    int i;
+    for (i = 0; i < (SM_FULL_SIZE)  ; i++){
+        s[i] = song[i];
+    }
 }
 
 #endif /* SUPERMARIOOVERWORLDTHEME_H_ */
